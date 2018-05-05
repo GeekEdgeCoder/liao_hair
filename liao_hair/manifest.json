@@ -15,6 +15,11 @@
 		"bin-debug/LoadingUI.js",
 		"bin-debug/Main.js",
 		"bin-debug/Platform.js",
-		"bin-debug/ThemeAdapter.js"
+		"bin-debug/ThemeAdapter.js",
+		"bin-debug/dto/back-info.js",
+		"bin-debug/dto/fight-info.js",
+		"bin-debug/dto/Instant-info.js",
+		"bin-debug/entity/player.js",
+		"bin-debug/entity/user.js"
 	]
 }
