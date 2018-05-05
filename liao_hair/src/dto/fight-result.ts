@@ -12,3 +12,6 @@ export class FightInfo {
     // 游戏结果
     private overResult: boolean;
 }
+export class FightResult {
+    private fightInfos: FightInfo[];
+}
