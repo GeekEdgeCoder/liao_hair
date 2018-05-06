@@ -1,3 +1,4 @@
+"use strict";
 var __reflect = (this && this.__reflect) || function (p, c, t) {
     p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
 };
@@ -36,26 +37,34 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var DebugPlatform = (function () {
-    function DebugPlatform() {
+Object.defineProperty(exports, "__esModule", { value: true });
+var fight_result_1 = require("./../dto/fight-result");
+var Begin = (function () {
+    function Begin() {
     }
-    DebugPlatform.prototype.getUserInfo = function () {
+    // 开始游戏，匹配，加载角色
+    Begin.prototype.match = function () {
         return __awaiter(this, void 0, void 0, function () {
+            var data;
             return __generator(this, function (_a) {
-                return [2 /*return*/, { nickName: "username" }];
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, new Promise(function () { return new fight_result_1.FightResult(); })];
+                    case 1:
+                        data = _a.sent();
+                        // succcess
+                        this.renderFightInfo(data);
+                        return [2 /*return*/];
+                }
             });
         });
     };
-    DebugPlatform.prototype.login = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/];
-            });
-        });
+    // 请求成功 渲染信息
+    Begin.prototype.renderFightInfo = function (fightResult) {
     };
-    return DebugPlatform;
+    // 请求失败 渲染失败界面
+    Begin.prototype.renderError = function () {
+    };
+    return Begin;
 }());
-__reflect(DebugPlatform.prototype, "DebugPlatform", ["Platform"]);
-if (!window.platform) {
-    window.platform = new DebugPlatform();
-}
+exports.Begin = Begin;
+__reflect(Begin.prototype, "\"/Users/zenp.liu/Documents/GitHub/liao_hair/liao_hair/src/rule/begin\".Begin");

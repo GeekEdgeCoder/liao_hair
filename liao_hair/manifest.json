@@ -11,10 +11,17 @@
 		"libs/modules/promise/promise.js"
 	],
 	"game": [
+		"bin-debug/dto/fight-result.js",
 		"bin-debug/AssetAdapter.js",
-		"bin-debug/LoadingUI.js",
 		"bin-debug/Main.js",
 		"bin-debug/Platform.js",
-		"bin-debug/ThemeAdapter.js"
+		"bin-debug/ThemeAdapter.js",
+		"bin-debug/dto/back-result.js",
+		"bin-debug/LoadingUI.js",
+		"bin-debug/dto/Instant-result.js",
+		"bin-debug/entity/player.js",
+		"bin-debug/entity/user.js",
+		"bin-debug/rule/begin.js",
+		"bin-debug/rule/fight.js"
 	]
 }
