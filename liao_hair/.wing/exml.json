@@ -1,0 +1,27 @@
+{
+    "16334870b64": {
+        "path": "view\\start-screen.ts",
+        "class": "start-screen",
+        "parentPath": ""
+    },
+    "1633487b995": {
+        "path": "view\\StartScreen.ts",
+        "class": "StartScreen",
+        "parentPath": ""
+    },
+    "163348ecaa1": {
+        "path": "view\\LodingScreen.ts",
+        "class": "LodingScreen",
+        "parentPath": ""
+    },
+    "1633494c5fa": {
+        "path": "view\\MainScreen.ts",
+        "class": "MainScreen",
+        "parentPath": ""
+    },
+    "16334a25c86": {
+        "path": "view\\EndScreen.ts",
+        "class": "EndScreen",
+        "parentPath": ""
+    }
+}

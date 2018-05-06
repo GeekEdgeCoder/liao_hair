@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LodingScreenSkin" width="1136" height="600" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="163348ecaa1" ></w:Config>
+	<e:Group width="1136" height="600" horizontalCenter="0" verticalCenter="0">
+		<e:Image width="80" height="80" horizontalCenter="-56" verticalCenter="0" x="135" y="70" scaleX="1" scaleY="1"/>
+		<e:Label text="载入中···" width="120" horizontalCenter="73" verticalCenter="0" anchorOffsetY="0" height="80" verticalAlign="middle" fontFamily="Microsoft YaHei"/>
+	</e:Group>
+</e:Skin>
