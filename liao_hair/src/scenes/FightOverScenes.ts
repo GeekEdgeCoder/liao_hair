@@ -1,4 +1,4 @@
-class MainScreen extends eui.Component implements  eui.UIComponent {
+class FightOverScenes extends eui.Component implements  eui.UIComponent {
 	public constructor() {
 		super();
 	}

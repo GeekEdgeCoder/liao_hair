@@ -78,12 +78,16 @@ var Main = (function (_super) {
     }
     Main.prototype.createChildren = function () {
         _super.prototype.createChildren.call(this);
+        // 生命周期
         egret.lifecycle.addLifecycleListener(function (context) {
             // custom lifecycle plugin
+            console.log(context);
         });
+        // 暂停
         egret.lifecycle.onPause = function () {
             egret.ticker.pause();
         };
+        // 继续
         egret.lifecycle.onResume = function () {
             egret.ticker.resume();
         };
@@ -101,16 +105,31 @@ var Main = (function (_super) {
             var result, userInfo;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.loadResource()];
+                    case 0: 
+                    // 加载资源
+                    return [4 /*yield*/, this.loadResource()
+                        // 创建场景
+                    ];
                     case 1:
+                        // 加载资源
                         _a.sent();
+                        // 创建场景
                         this.createGameScene();
-                        return [4 /*yield*/, RES.getResAsync("description_json")];
+                        return [4 /*yield*/, RES.getResAsync("description_json")
+                            // 渲染动画
+                            // this.startAnimation(result);
+                            // 获取数据
+                        ];
                     case 2:
                         result = _a.sent();
-                        this.startAnimation(result);
+                        // 渲染动画
+                        // this.startAnimation(result);
+                        // 获取数据
                         return [4 /*yield*/, platform.login()];
                     case 3:
+                        // 渲染动画
+                        // this.startAnimation(result);
+                        // 获取数据
                         _a.sent();
                         return [4 /*yield*/, platform.getUserInfo()];
                     case 4:
@@ -166,55 +185,14 @@ var Main = (function (_super) {
      * Create scene interface
      */
     Main.prototype.createGameScene = function () {
-        var sky = this.createBitmapByName("bg_jpg");
-        this.addChild(sky);
+        // let sky = this.createBitmapByName("bg_jpg");
+        // 插入资源
+        // this.addChild(sky);
         var stageW = this.stage.stageWidth;
         var stageH = this.stage.stageHeight;
-        sky.width = stageW;
-        sky.height = stageH;
-        var topMask = new egret.Shape();
-        topMask.graphics.beginFill(0x000000, 0.5);
-        topMask.graphics.drawRect(0, 0, stageW, 172);
-        topMask.graphics.endFill();
-        topMask.y = 33;
-        this.addChild(topMask);
-        var icon = this.createBitmapByName("egret_icon_png");
-        this.addChild(icon);
-        icon.x = 26;
-        icon.y = 33;
-        var line = new egret.Shape();
-        line.graphics.lineStyle(2, 0xffffff);
-        line.graphics.moveTo(0, 0);
-        line.graphics.lineTo(0, 117);
-        line.graphics.endFill();
-        line.x = 172;
-        line.y = 61;
-        this.addChild(line);
-        var colorLabel = new egret.TextField();
-        colorLabel.textColor = 0xffffff;
-        colorLabel.width = stageW - 172;
-        colorLabel.textAlign = "center";
-        colorLabel.text = "Hello Egret";
-        colorLabel.size = 24;
-        colorLabel.x = 172;
-        colorLabel.y = 80;
-        this.addChild(colorLabel);
-        var textfield = new egret.TextField();
-        this.addChild(textfield);
-        textfield.alpha = 0;
-        textfield.width = stageW - 172;
-        textfield.textAlign = egret.HorizontalAlign.CENTER;
-        textfield.size = 24;
-        textfield.textColor = 0xffffff;
-        textfield.x = 172;
-        textfield.y = 135;
-        this.textfield = textfield;
-        var button = new eui.Button();
-        button.label = "Click!";
-        button.horizontalCenter = 0;
-        button.verticalCenter = 0;
-        this.addChild(button);
-        button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
+        console.log(stageW, stageH);
+        this.control = new Control();
+        this.addChild(this.control);
     };
     /**
      * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。

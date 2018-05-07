@@ -1,4 +1,4 @@
-export class Player {
+class Player {
     // 动作
     private action: string;
     // 血量

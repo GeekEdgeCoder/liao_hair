@@ -1,27 +1,27 @@
 {
     "16334870b64": {
-        "path": "view\\start-screen.ts",
-        "class": "start-screen",
+        "path": "scenes\\FightBeginScenes.ts",
+        "class": "FightBeginScenes",
         "parentPath": ""
     },
     "1633487b995": {
-        "path": "view\\StartScreen.ts",
-        "class": "StartScreen",
+        "path": "scenes\\MainScenes.ts",
+        "class": "MainScenes",
         "parentPath": ""
     },
     "163348ecaa1": {
-        "path": "view\\LodingScreen.ts",
-        "class": "LodingScreen",
+        "path": "scenes\\MarchingScenes.ts",
+        "class": "MarchingScenes",
         "parentPath": ""
     },
     "1633494c5fa": {
-        "path": "view\\MainScreen.ts",
-        "class": "MainScreen",
+        "path": "scenes\\FightBeginScenes.ts",
+        "class": "FightBeginScenes",
         "parentPath": ""
     },
     "16334a25c86": {
-        "path": "view\\EndScreen.ts",
-        "class": "EndScreen",
+        "path": "scenes\\FightOverScenes.ts",
+        "class": "FightOverScenes",
         "parentPath": ""
     }
 }

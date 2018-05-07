@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="StartScreenSkin" width="1136" height="600" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
-	<w:Config id="1633487b995" ></w:Config>
-	<e:Group width="1136" height="600" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0">
-		<e:Image width="1136" height="600" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0"/>
-		<e:Label text="撩头发" y="127" horizontalCenter="0" fontFamily="Microsoft YaHei" size="42"/>
-		<e:Button id="startGameButton" label="开始游戏" horizontalCenter="0" bottom="106" rotation="0.18" width="200" height="60"/>
-	</e:Group>
-</e:Skin>

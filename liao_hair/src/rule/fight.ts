@@ -1,5 +1,4 @@
-import { Player } from './../entity/player';
-export class Fight{
+class Fight{
     constructor(players: Player[]) {
 
     }

@@ -1,4 +1,4 @@
-class LodingScreen extends eui.Component implements  eui.UIComponent {
+class FightBeginScenes extends eui.Component implements  eui.UIComponent {
 	public constructor() {
 		super();
 	}

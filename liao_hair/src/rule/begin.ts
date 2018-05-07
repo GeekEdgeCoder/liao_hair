@@ -1,6 +1,4 @@
-import { FightResult } from './../dto/fight-result';
-
-export class Begin {
+class Begin {
     // 开始游戏，匹配，加载角色
     async match() {
         const data: FightResult = <FightResult> await new Promise(() => new FightResult());

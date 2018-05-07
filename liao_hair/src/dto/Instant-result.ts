@@ -1,8 +1,8 @@
-export class InstantInfo {
+class InstantInfo {
     private id: string;
     private action: string;
     private time: number;
 }
-export class InstantResult {
+class InstantResult {
     private instantInfos: InstantInfo[];
 }

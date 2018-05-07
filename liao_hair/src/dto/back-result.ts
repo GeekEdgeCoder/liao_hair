@@ -1,8 +1,8 @@
-export class BackInfo { 
+class BackInfo { 
     id: string;
     action: string;
     value: number;
 }
-export class BackResult {
+class BackResult {
     private backInfos: BackInfo[];
 }

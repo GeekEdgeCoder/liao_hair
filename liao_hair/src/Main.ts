@@ -27,8 +27,9 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////
 
-class Main extends eui.UILayer {
 
+class Main extends eui.UILayer {
+    private control: Control;
 
     protected createChildren(): void {
         super.createChildren();
@@ -68,7 +69,7 @@ class Main extends eui.UILayer {
         const result = await RES.getResAsync("description_json")
 
         // 渲染动画
-        this.startAnimation(result);
+        // this.startAnimation(result);
 
         // 获取数据
         await platform.login();
@@ -109,66 +110,18 @@ class Main extends eui.UILayer {
      * Create scene interface
      */
     protected createGameScene(): void {
-        let sky = this.createBitmapByName("bg_jpg");
+        // let sky = this.createBitmapByName("bg_jpg");
         // 插入资源
         // this.addChild(sky);
         let stageW = this.stage.stageWidth;
         let stageH = this.stage.stageHeight;
-        // sky.width = stageW;
-        // sky.height = stageH;
+        console.log(stageW,stageH);
 
-        let topMask = new egret.Shape();
-        topMask.graphics.beginFill(0x000000, 0.5);
-        topMask.graphics.drawRect(0, 0, stageW, 172);
-        topMask.graphics.endFill();
-        topMask.y = 150;
-        this.addChild(topMask);
+    
+        this.control = new Control();
+       
+        this.addChild(this.control);
 
-        // let icon: egret.Bitmap = this.createBitmapByName("egret_icon_png");
-        // this.addChild(icon);
-        // icon.x = 26;
-        // icon.y = 33;
-
-        // let line = new egret.Shape();
-        // line.graphics.lineStyle(2, 0xffffff);
-        // line.graphics.moveTo(0, 0);
-        // line.graphics.lineTo(0, 117);
-        // line.graphics.endFill();
-        // line.x = 172;
-        // line.y = 61;
-        // this.addChild(line);
-
-
-        let colorLabel = new egret.TextField();
-        colorLabel.textColor = 0xffffff;
-        colorLabel.width = stageW;
-        colorLabel.textAlign = "center";
-        colorLabel.text = "撩头发";
-        colorLabel.size = 24;
-        // colorLabel.x = 172;
-        colorLabel.y = 220;
-        this.addChild(colorLabel);
-
-        // let textfield = new egret.TextField();
-        // this.addChild(textfield);
-        // textfield.alpha = 0;
-        // textfield.width = stageW - 172;
-        // textfield.textAlign = egret.HorizontalAlign.CENTER;
-        // textfield.size = 24;
-        // textfield.textColor = 0xffffff;
-        // textfield.x = 172;
-        // textfield.y = 135;
-        // this.textfield = textfield;
-
-
-        let button = new eui.Button();
-        button.label = "开始匹配";
-        button.horizontalCenter = 0;
-        button.y = stageH - 200;
-        button.width = stageW / 5;
-        // button.verticalCenter = 0;
-        this.addChild(button);
-        button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
     }
     /**
      * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。

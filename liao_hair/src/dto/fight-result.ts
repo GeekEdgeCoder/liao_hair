@@ -1,4 +1,4 @@
-export class FightInfo {
+class FightInfo {
     // 用户id
     private id: string;
     // 头像
@@ -12,6 +12,6 @@ export class FightInfo {
     // 游戏结果
     private overResult: boolean;
 }
-export class FightResult {
+class FightResult {
     private fightInfos: FightInfo[];
 }

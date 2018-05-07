@@ -1,4 +1,3 @@
-"use strict";
 var __reflect = (this && this.__reflect) || function (p, c, t) {
     p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
 };
@@ -37,8 +36,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var fight_result_1 = require("./../dto/fight-result");
 var Begin = (function () {
     function Begin() {
     }
@@ -48,7 +45,7 @@ var Begin = (function () {
             var data;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, new Promise(function () { return new fight_result_1.FightResult(); })];
+                    case 0: return [4 /*yield*/, new Promise(function () { return new FightResult(); })];
                     case 1:
                         data = _a.sent();
                         // succcess
@@ -66,5 +63,4 @@ var Begin = (function () {
     };
     return Begin;
 }());
-exports.Begin = Begin;
-__reflect(Begin.prototype, "\"/Users/zenp.liu/Documents/GitHub/liao_hair/liao_hair/src/rule/begin\".Begin");
+__reflect(Begin.prototype, "Begin");

@@ -1,4 +1,4 @@
-export class User {
+class User {
     // 皮肤
     private skins: any;
     // 积分
