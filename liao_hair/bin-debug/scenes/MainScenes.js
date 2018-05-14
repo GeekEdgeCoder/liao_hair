@@ -24,14 +24,13 @@ var MainScenes = (function (_super) {
         _super.prototype.childrenCreated.call(this);
     };
     MainScenes.prototype.createScenes = function () {
-        this.beginButton.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
+        // this.beginButton.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
         // this.background = new egret.Bitmap();
         // this.background.texture = RES.getRes('bg_jpg');
         // this.addChild(this.background);
     };
     MainScenes.prototype.onButtonClick = function (e) {
-        this.
-        ;
+        // this.
     };
     return MainScenes;
 }(eui.Component));

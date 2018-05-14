@@ -2,7 +2,7 @@ class MainScenes extends eui.Component implements eui.UIComponent {
 
 	private background: egret.Bitmap;
 
-	private beginButton: eui.Button;
+	public beginButton: eui.Button;
 
 	private begin: Begin;
 
@@ -25,12 +25,12 @@ class MainScenes extends eui.Component implements eui.UIComponent {
 
 	createScenes() {
 		
-		this.beginButton.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
+		// this.beginButton.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
 		// this.background = new egret.Bitmap();
 		// this.background.texture = RES.getRes('bg_jpg');
 		// this.addChild(this.background);
 	}
 	private onButtonClick(e: egret.TouchEvent) {
-        this.
+        // this.
     }
 }

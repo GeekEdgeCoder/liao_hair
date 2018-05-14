@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="FightBeginScenes" width="1136" height="600" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="1633494c5fa" ></w:Config>
+	<e:Group width="1136" height="600" horizontalCenter="0" verticalCenter="0">
+		<e:Image width="300" height="400" horizontalCenter="0" y="54"/>
+		<e:Image width="450" height="360" x="0" y="145" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:Image width="176" height="144" x="25" y="445" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:Image width="176" height="144" x="935" y="445" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:Image width="450" height="360" x="686" y="145" anchorOffsetX="0"/>
+		<e:Label text="右手" x="993" y="491"/>
+		<e:Label text="左手" x="78" y="491"/>
+	</e:Group>
+</e:Skin>
