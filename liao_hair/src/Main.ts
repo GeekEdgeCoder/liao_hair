@@ -26,14 +26,14 @@
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+//
 
 class Main extends eui.UILayer {
     private control: Control;
-
+    private httpClient: HttpClient;
     protected createChildren(): void {
         super.createChildren();
-
+        this.httpClient = new HttpClient();
         // 生命周期
         egret.lifecycle.addLifecycleListener((context) => {
             // custom lifecycle plugin
@@ -73,10 +73,20 @@ class Main extends eui.UILayer {
 
         // 获取数据
         const login = await platform.login();
-        console.log(login);
+        
         const userInfo = await platform.getUserInfo();
-        console.log(platform);
+       
         console.log(userInfo);
+
+         console.log(login.code);
+
+         const data = await toPromise(this.httpClient.post(`${webServerURL}sign/in`,login));
+
+//   this.webSocket = new egret.WebSocket();        
+//     this.webSocket.addEventListener(egret.ProgressEvent.SOCKET_DATA, this.onReceiveMessage, this);                            
+//     this.webSocket.addEventListener(egret.Event.CONNECT, this.onSocketOpen, this);    
+//     this.webSocket.connect("echo.websocket.org", 80);
+       
 
     }
 
@@ -176,4 +186,18 @@ class Main extends eui.UILayer {
         panel.verticalCenter = 0;
         this.addChild(panel);
     }
+
+
+
+    private webSocket:egret.WebSocket;
+
+private onSocketOpen():void {    
+    var cmd = "Hello Egret WebSocket";    
+    console.log("连接成功，发送数据：" + cmd);    
+    this.webSocket.writeUTF(cmd);
+}
+private onReceiveMessage(e:egret.Event):void {    
+    var msg = this.webSocket.readUTF();    
+    console.log("收到数据：" + msg);
+}
 }

@@ -1,8 +1,29 @@
 {
   "name": "server",
-  "version": "0.0.1",
-  "private": false,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node ./src/main.ts"
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "express": "3.4.8"
+    "@types/jwt-simple": "^0.5.33",
+    "@types/multiparty": "0.0.31",
+    "bluebird": "^3.5.1",
+    "fs": "0.0.1-security",
+    "jwt-simple": "^0.5.1",
+    "koa": "^2.5.0",
+    "koa-router": "^7.4.0",
+    "multiparty": "^4.1.3",
+    "mysql2": "^1.5.2",
+    "path": "^0.12.7",
+    "promise-mysql": "^3.2.1",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2",
+    "ts-node": "^5.0.1",
+    "typings": "^2.1.1"
   }
 }

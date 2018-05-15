@@ -18,10 +18,54 @@ class Control extends egret.Sprite {
         
         this.addChild(this.mainScenes);
         this.mainScenes.beginButton.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnBeginClick, this);
+        this.loadMain();
     }
 
     loadMain(){
         this.addChild(this.mainScenes);
+
+   
+    // const pomelo = new PomeloForEgret.Pomelo();
+    // const callback = (host, port) =>{
+	// 		pomelo.init({
+	// 			host: host,
+	// 			port: port,
+	// 			log: true
+	// 		}, function() {
+	// 			var route = "connector.entryHandler.enter";
+	// 			pomelo.request(route, {
+	// 				username: '123456',
+	// 				rid: 1
+	// 			}, function(data) {
+    //                 console.log(data);
+	// 				if(data.error) {
+	// 					// showError(DUPLICATE_ERROR);
+	// 					return;
+	// 				}
+	// 				// setName();
+	// 				// setRoom();
+	// 				// showChat();
+	// 				// initUserList(data);
+	// 			});
+	// 		});
+	// 	}
+    // pomelo.init({
+	// 	host: window.location.hostname,
+	// 	port: 3014,
+	// 	log: true
+	// }, function() {
+	// 	pomelo.request('gate.gateHandler.queryEntry', {
+	// 		uid: '12'
+	// 	}, function(data) {
+	// 		pomelo.disconnect();
+	// 		if(data.code === 500) {
+	// 			// showError(LOGIN_ERROR);
+	// 			return;
+	// 		}
+	// 		callback(data.host, data.port);
+	// 	});
+	// });
+    
     }
 
     loadMatching(){

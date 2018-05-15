@@ -7,9 +7,9 @@
 		"minified": true,
 		"newFeature": true
 	},
-	"compileType": "game",
+	"compileType": "miniprogram",
 	"libVersion": "game",
-	"appid": "wx6ac3f5090a6b99c5",
+	"appid": "wx71bedcf67ea04d43",
 	"projectname": "liao_hair",
 	"condition": {
 		"search": {
