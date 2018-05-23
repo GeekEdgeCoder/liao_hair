@@ -15,12 +15,13 @@ export class Sign {
 
 
 
-        // const data = await rp({
-        //     uri: getCheckSignInCode(login.code),
-        //     json: true
-        // });
+        const data = await rp({
+            uri: getCheckSignInCode(login.code),
+            json: true
+        });
+        // const data = {"session_key":"UujTHz+UTVb71NSm8124DQ==","openid":"owmye4o4eCcsMPzagInzUM3nBdbA"};
         // console.log(data);
         // const result = await pool.query(`SELECT count(*) AS signIn FROM user WHERE name = ${name} AND password= ${password}`);
-        ctx.body = result;
+        ctx.body = data;
     }
 }

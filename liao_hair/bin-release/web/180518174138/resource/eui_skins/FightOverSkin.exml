@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="FightOverScenes" width="1136" height="600" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="16334a25c86" ></w:Config>
+	<e:Group width="1136" height="600" verticalCenter="0" horizontalCenter="0">
+		<e:Label text="WIN or LOSE" x="549" y="151" height="80" verticalAlign="middle"/>
+		<e:Image width="80" height="80" x="445" y="151"/>
+		<e:Button label="再来一局" x="315" y="450" width="150" height="60"/>
+		<e:Button label="返回" x="633" y="450" width="150" height="60"/>
+	</e:Group>
+</e:Skin>

@@ -72,9 +72,9 @@ class Main extends eui.UILayer {
         // this.startAnimation(result);
 
         // 获取数据
-        const login = await platform.login();
+      
         
-        const userInfo = await platform.getUserInfo();
+        const [login, userInfo] = [await platform.login() ,await platform.getUserInfo()];
        
         console.log(userInfo);
 

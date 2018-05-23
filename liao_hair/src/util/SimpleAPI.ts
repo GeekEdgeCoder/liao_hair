@@ -3,6 +3,7 @@
 const toPromise = (request) => {
     return new Promise((resolve, reject) => {
         request.addEventListener(egret.ProgressEvent.COMPLETE, (event: egret.Event): void => {
+            const request = <egret.HttpRequest>event.currentTarget;
             let response = request.response;
             try {
                 response = JSON.parse(request.response);

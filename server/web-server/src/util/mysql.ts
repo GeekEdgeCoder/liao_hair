@@ -5,6 +5,6 @@ export const pool: Pool = createPool({
     user: 'root',
     password: 'ger.170728##',
     port: 3306,
-    database: 'blog',
+    database: 'liao_hair',
     connectionLimit: 10
 });
