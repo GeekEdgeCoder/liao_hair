@@ -217,9 +217,9 @@ var Main = (function (_super) {
     };
     Main.prototype.runGame = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var result, login, userInfo, data;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
+            var result, _a, login, userInfo, _b, data;
+            return __generator(this, function (_c) {
+                switch (_c.label) {
                     case 0: 
                     // 加载资源
                     return [4 /*yield*/, this.loadResource()
@@ -227,7 +227,7 @@ var Main = (function (_super) {
                     ];
                     case 1:
                         // 加载资源
-                        _a.sent();
+                        _c.sent();
                         // 创建场景
                         this.createGameScene();
                         return [4 /*yield*/, RES.getResAsync("description_json")
@@ -236,18 +236,18 @@ var Main = (function (_super) {
                             // 获取数据
                         ];
                     case 2:
-                        result = _a.sent();
+                        result = _c.sent();
                         return [4 /*yield*/, platform.login()];
                     case 3:
-                        login = _a.sent();
+                        _b = [_c.sent()];
                         return [4 /*yield*/, platform.getUserInfo()];
                     case 4:
-                        userInfo = _a.sent();
+                        _a = _b.concat([_c.sent()]), login = _a[0], userInfo = _a[1];
                         console.log(userInfo);
                         console.log(login.code);
                         return [4 /*yield*/, toPromise(this.httpClient.post(webServerURL + "sign/in", login))];
                     case 5:
-                        data = _a.sent();
+                        data = _c.sent();
                         return [2 /*return*/];
                 }
             });

@@ -80,8 +80,8 @@ class Main extends eui.UILayer {
 
          console.log(login.code);
 
-         const data = await toPromise(this.httpClient.post(`${webServerURL}sign/in`,login));
-
+         const data: any = await toPromise(this.httpClient.post(`${webServerURL}sign/in`,login));
+         console.log(data.token)
 //   this.webSocket = new egret.WebSocket();        
 //     this.webSocket.addEventListener(egret.ProgressEvent.SOCKET_DATA, this.onReceiveMessage, this);                            
 //     this.webSocket.addEventListener(egret.Event.CONNECT, this.onSocketOpen, this);    
